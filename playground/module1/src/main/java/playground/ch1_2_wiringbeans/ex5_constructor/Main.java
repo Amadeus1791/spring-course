@@ -9,7 +9,7 @@ public class Main {
         var robot = context.getBean(Robot.class);
         System.out.println("constructor injection, battery: " + robot.getBattery().getType());
 
-        Robot byHand = new Robot(new Battery());
+        var byHand = new Robot(new Battery());
         System.out.println("created with new, battery: " + (byHand.getBattery() == null ? "null" : byHand.getBattery().getType()));
         context.close();
     }

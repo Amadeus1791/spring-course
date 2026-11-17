@@ -11,6 +11,11 @@ public class Main {
 
         var byHand = new Robot();
         System.out.println("created with new, battery: " + (byHand.getBattery() == null ? "null" : byHand.getBattery().getType()));
+        try {
+            byHand.getBattery().getType();
+        } catch (NullPointerException e) {
+            System.out.println("first use: " + e.getClass().getSimpleName());
+        }
         context.close();
     }
 }
