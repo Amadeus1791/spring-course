@@ -5,7 +5,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class Main {
 
     public static void main(String[] args) {
-        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(RobotConfig.class);
+        var context = new AnnotationConfigApplicationContext(RobotConfig.class);
 
         System.out.println("By name: " + context.getBean("rusty", Robot.class).getName());
         System.out.println("All robots: " + context.getBeansOfType(Robot.class).keySet());

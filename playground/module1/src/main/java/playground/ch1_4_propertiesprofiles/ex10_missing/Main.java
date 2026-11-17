@@ -9,7 +9,7 @@ import playground.ch1_4_propertiesprofiles.ex1_source.RobotConfig;
 public class Main {
 
     public static void main(String[] args) {
-        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(RobotConfig.class);
+        var context = new AnnotationConfigApplicationContext(RobotConfig.class);
         Environment env = context.getEnvironment();
 
         System.out.println("getProperty:          " + env.getProperty("robot.color"));

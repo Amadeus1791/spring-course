@@ -6,7 +6,7 @@ import org.springframework.core.env.Environment;
 public class Main {
 
     public static void main(String[] args) {
-        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(RobotConfig.class);
+        var context = new AnnotationConfigApplicationContext(RobotConfig.class);
         Environment environment = context.getEnvironment();
 
         String name = environment.getProperty("robot.name");

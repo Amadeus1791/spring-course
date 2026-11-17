@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("1. Robot:");
         var first = new AnnotationConfigApplicationContext(Battery.class, Robot.class);
-        Robot robot = first.getBean(Robot.class);
+        var robot = first.getBean(Robot.class);
         System.out.println("  battery: " + (robot.getBattery() == null ? "null" : robot.getBattery().getType()));
         first.close();
 

@@ -6,7 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
         System.out.println("1. start");
-        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(RobotConfig.class);
+        var context = new AnnotationConfigApplicationContext(RobotConfig.class);
         System.out.println("2. work");
         System.out.println("3. close");
         context.close();

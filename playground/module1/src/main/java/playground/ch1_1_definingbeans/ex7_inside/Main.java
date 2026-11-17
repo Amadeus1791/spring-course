@@ -7,7 +7,7 @@ public class Main {
 
     public static void main(String[] args) {
         System.out.println("1. new AnnotationConfigApplicationContext(...)");
-        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(RobotConfig.class);
+        var context = new AnnotationConfigApplicationContext(RobotConfig.class);
 
         System.out.println("2. All bean names:");
         for (String name : context.getBeanDefinitionNames()) {

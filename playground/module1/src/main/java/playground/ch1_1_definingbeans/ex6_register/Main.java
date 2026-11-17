@@ -7,7 +7,7 @@ import java.util.function.Supplier;
 public class Main {
 
     public static void main(String[] args) {
-        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
+        var context = new AnnotationConfigApplicationContext();
 
         // The name of the robot comes from somewhere at runtime, for example from the command line.
         String name = args.length > 0 ? args[0] : "Robo";

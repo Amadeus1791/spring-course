@@ -5,9 +5,9 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class Main {
 
     public static void main(String[] args) {
-        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(RobotConfig.class);
-        Counter first = context.getBean(Counter.class);
-        Counter second = context.getBean(Counter.class);
+        var context = new AnnotationConfigApplicationContext(RobotConfig.class);
+        var first = context.getBean(Counter.class);
+        var second = context.getBean(Counter.class);
 
         first.increment();
         second.increment();

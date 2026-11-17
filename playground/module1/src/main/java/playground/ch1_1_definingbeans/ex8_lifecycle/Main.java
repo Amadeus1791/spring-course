@@ -6,7 +6,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class Main {
 
     public static void main(String[] args) {
-        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
+        var context = new AnnotationConfigApplicationContext();
         context.register(RobotConfig.class);
 
         System.out.println("getBean() before refresh():");

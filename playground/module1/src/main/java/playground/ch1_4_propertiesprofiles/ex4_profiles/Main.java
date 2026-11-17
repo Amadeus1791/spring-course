@@ -14,7 +14,7 @@ public class Main {
     }
 
     private static void print(String... profiles) {
-        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
+        var context = new AnnotationConfigApplicationContext();
         context.getEnvironment().setActiveProfiles(profiles);   // before refresh
         context.register(RobotConfig.class);
         context.refresh();

@@ -6,7 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
         // 1. Properties: @PropertySource is read during refresh
-        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
+        var context = new AnnotationConfigApplicationContext();
         context.register(RobotConfig.class);
         System.out.println("robot.name before refresh: " + context.getEnvironment().getProperty("robot.name"));
         context.refresh();

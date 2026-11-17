@@ -14,7 +14,7 @@ public class Main {
     }
 
     private static void print(AnnotationConfigApplicationContext context) {
-        Robot robot = context.getBean(Robot.class);
+        var robot = context.getBean(Robot.class);
         System.out.println("  String[]:         " + robot.getToolArray().length + " " + Arrays.toString(robot.getToolArray()));
         System.out.println("  List<String>:     " + robot.getToolList().size() + " " + robot.getToolList());
         System.out.println("  List, SpEL split: " + robot.getSplitList().size() + " " + robot.getSplitList());

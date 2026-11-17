@@ -9,8 +9,8 @@ public class NotThePattern {
     public static void main(String[] args) {
         var one = new AnnotationConfigApplicationContext(RobotConfig.class);
         var two = new AnnotationConfigApplicationContext(RobotConfig.class);
-        Counter fromOne = one.getBean(Counter.class);
-        Counter fromTwo = two.getBean(Counter.class);
+        var fromOne = one.getBean(Counter.class);
+        var fromTwo = two.getBean(Counter.class);
         System.out.println("Two contexts, one counter:  " + (fromOne == fromTwo));
 
         var three = new AnnotationConfigApplicationContext(TwoCounters.class);
