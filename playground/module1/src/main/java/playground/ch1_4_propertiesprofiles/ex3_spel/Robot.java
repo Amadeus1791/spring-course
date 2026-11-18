@@ -18,10 +18,14 @@ public class Robot {
     @Value("#{systemProperties['robot.mode'] ?: 'normal'}")   // Elvis: default if null
     private String mode;
 
+    @Value("${robot.mode:normal}")                      // the same with a placeholder: asks every source
+    private String modeFromPlaceholder;
+
     public String describe() {
         return "seconds per shift: " + secondsPerShift + "\n"
                 + "loud name:         " + loudName + "\n"
                 + "reserve:           " + reserve + "\n"
-                + "mode:              " + mode;
+                + "mode:              " + mode + "\n"
+                + "mode, placeholder: " + modeFromPlaceholder;
     }
 }

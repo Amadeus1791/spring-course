@@ -11,6 +11,9 @@ public class Main {
 
         var byHand = new Robot();
         System.out.println("created with new, battery: " + (byHand.getBattery() == null ? "null" : byHand.getBattery().getType()));
+
+        byHand.setBattery(new Battery());              // filled by hand: the setter is the way in
+        System.out.println("after setBattery, battery: " + byHand.getBattery().getType());
         context.close();
     }
 }
