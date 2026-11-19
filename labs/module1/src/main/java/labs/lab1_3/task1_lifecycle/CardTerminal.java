@@ -2,47 +2,24 @@ package labs.lab1_3.task1_lifecycle;
 
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
-import org.springframework.beans.factory.DisposableBean;
-import org.springframework.beans.factory.InitializingBean;
-import org.springframework.beans.factory.annotation.Autowired;
 
-// A card terminal in a shop. Every way to run code at birth and at death, all at once.
-public class CardTerminal implements InitializingBean, DisposableBean {
+// A card terminal in a shop. It cannot work without its PIN keys.
+public class CardTerminal {
 
-    public CardTerminal() {
-        System.out.println("  constructor");
-    }
+    private final PinKeys keys;
 
-    @Autowired
-    public void setNetwork(CardNetwork network) {
-        System.out.println("  setter: network " + network.name());
+    public CardTerminal(PinKeys keys) {
+        this.keys = keys;
+        System.out.println("  terminal created");
     }
 
     @PostConstruct
     public void selfTest() {
-        System.out.println("  @PostConstruct selfTest()");
-    }
-
-    @Override
-    public void afterPropertiesSet() {
-        System.out.println("  afterPropertiesSet()");
-    }
-
-    public void open() {
-        System.out.println("  initMethod open()");
+        System.out.println("  terminal ready");
     }
 
     @PreDestroy
-    public void logOff() {
-        System.out.println("  @PreDestroy logOff()");
-    }
-
-    @Override
-    public void destroy() {
-        System.out.println("  destroy()");
-    }
-
-    public void shutdown() {
-        System.out.println("  destroyMethod shutdown()");
+    public void switchOff() {
+        System.out.println("  terminal off");
     }
 }

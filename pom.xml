@@ -13,6 +13,8 @@
 
     <modules>
         <module>labs/module1</module>
+        <module>labs/module2</module>
         <module>playground/module1</module>
+        <module>playground/module2</module>
     </modules>
 </project>

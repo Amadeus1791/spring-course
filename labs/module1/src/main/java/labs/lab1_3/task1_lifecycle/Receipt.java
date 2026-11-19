@@ -11,6 +11,6 @@ public class Receipt {
 
     @PreDestroy
     public void shred() {
-        System.out.println("  @PreDestroy receipt shredded");
+        System.out.println("  receipt shredded");
     }
 }
