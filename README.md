@@ -19,3 +19,10 @@ After a lab has been discussed, its debrief deck appears there and its solution 
 
 Small examples, one project per module (`module1`, `module2`), inside it one
 package per chapter and one per example, in the order of the slides. Every example has a `main` you can run.
+
+## Maven in the terminal
+
+The slides and the lab booklet write `mvn test` or `mvn package`. No Maven installed, or an old one?
+This folder and every project in it bring the Maven Wrapper: type `./mvnw` instead of `mvn`
+(Windows: `mvnw.cmd`, in PowerShell `.\mvnw`), for example `./mvnw test` in `labs/module2`.
+The first call downloads the right Maven version once. `./mvnw -v` shows whether it works.
